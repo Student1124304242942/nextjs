@@ -1,26 +1,26 @@
-@import url("tailwindcss");
+@import "tailwindcss";
 
 :root {
-  --background: #fff;
-  --foreground: #171717;
+  /* Цвета из вашего конфига */
+  --color-black: #3B434E;
+  --color-gray-light: #EBEBEB;
+  --color-white: #ffffff;
+  --color-primary: #7653FC;
+  --color-primary-hover: #6445df;
+  --color-red: #FC8360;
+  --color-green: #1DC37E;
+  --color-green-light: #C8F8E4;
+
+  /* Шрифты – CSS-переменная должна быть определена через next/font в layout */
+  --font-sans: var(--font-noto);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Ваши глобальные стили */
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--foreground);
-  background: var(--background);
+a {
+  text-decoration: none;
+  color: inherit;
 }
