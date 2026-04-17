@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root {
+@theme {
   /* Цвета из вашего конфига */
   --color-black: #3B434E;
   --color-gray-light: #EBEBEB;
@@ -10,7 +10,9 @@
   --color-red: #FC8360;
   --color-green: #1DC37E;
   --color-green-light: #C8F8E4;
+}
 
+@theme inline {
   /* Шрифты – CSS-переменная должна быть определена через next/font в layout */
   --font-sans: var(--font-noto);
 }
