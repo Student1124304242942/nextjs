@@ -1,9 +1,10 @@
-import { Button, Htag, P, Tag } from "@/components";
+import { Button, Htag, P, Rating, Tag } from "@/components";
 
 import Image from "next/image";
 
 
 export default function Home() {
+  
   return (
     <div className="">
       <Htag tag="h1">Текс</Htag>
@@ -22,6 +23,7 @@ export default function Home() {
       <Tag size="s" color="grey">Обычный</Tag>
       <Tag size="s" color="primary">Новое</Tag>
       <Tag size="m" color="primary" href="https://react.dev">React</Tag>
+      <Rating rating={4}/>
     </div>
   );
 }
