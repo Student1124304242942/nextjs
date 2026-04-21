@@ -1,6 +1,10 @@
 import type { Metadata } from "next"
 import { Geist, Geist_Mono,Noto_Sans } from "next/font/google"
 import "./globals.css"
+import { Header } from "./components/Header/Header"
+import { Sidebar } from "./components/Sidebar/Sidebar"
+import { Footer } from "./components/Footer/Footer"
+ 
 
  
 
@@ -27,7 +31,16 @@ export default function RootLayout({
       lang="en"
       className={` ${notoSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full  m-0 p-0 bg-[#F5F6F8] ">{children}</body>
+      <body className="min-h-full  m-0 p-0 bg-[#F5F6F8] grid ">
+        <Header/>
+        <div>
+          <Sidebar/>
+          <main>
+            {children}
+          </main>
+        </div>
+        <Footer/>        
+      </body>
     </html>
   );
 }
