@@ -4,7 +4,7 @@ import "./globals.css"
 import { Header } from "./components/Header/Header"
 import { Sidebar } from "./components/Sidebar/Sidebar"
 import { Footer } from "./components/Footer/Footer"
- 
+import style from './layout.module.css';
 
  
 
@@ -27,19 +27,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={` ${notoSans.variable} h-full antialiased`}
-    >
-      <body className="min-h-full  m-0 p-0 bg-[#F5F6F8] grid ">
-        <Header/>
-        <div>
-          <Sidebar/>
-          <main>
-            {children}
-          </main>
+    <html lang="en" className={`${notoSans.variable} h-full antialiased`}>
+      <body className="min-h-full m-0 p-0 bg-[#F5F6F8]">
+        <div className={style.wrapper}>
+          <Header className={style.header} />
+          <Sidebar className={style.sidebar} />
+          <main className={style.body}>{children}</main>
+          <Footer className={style.footer} />
         </div>
-        <Footer/>        
       </body>
     </html>
   );

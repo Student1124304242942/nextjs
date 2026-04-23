@@ -1,9 +1,9 @@
 import { JSX, ComponentPropsWithoutRef } from "react";
 import { Logo } from "./components/Logo/Logo";
-
-export const Header = ({ ...props }: ComponentPropsWithoutRef<"header">): JSX.Element => {
+import cn from "classnames";
+export const Header = ({ className,...props }: ComponentPropsWithoutRef<"header">): JSX.Element => {
     return (
-        <header {...props}>
+        <header {...props} className={cn(className)}>
             <Logo />
         </header>
     );
